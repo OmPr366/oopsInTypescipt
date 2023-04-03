@@ -1,15 +1,24 @@
 class Car{
+    name: string;
     lisense :  number;
-    constructor(num:number = 100){
-        this.lisense =  num;
+    constructor(obName:string = "Car"){
+        this.lisense =  200;
+        this.name = obName
     }
     getLisence(){
         return this.lisense
     }
-    move(){
-        console.log("Moved to Patna ")
+    move(distance:number =100){
+        return console.log("Moved to Patna by ",distance, "Km")
     }
 }
 
-let obj =  new Car();
-console.log(obj.getLisence())
+class BMW extends Car {
+    constructor(name:string=""){
+        super(name)
+    }
+}
+
+// let obj =  new Car();
+let obj2 =  new BMW();
+console.log(obj2.name)
